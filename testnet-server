@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# app_net server - Startup script for app_net server
+# chkconfig: 35 90 10
+# description: app_net server.
+# processname: app_net
+# config: /etc/mx_apps/app_net
+# pidfile: /var/run/app_net
+
+### BEGIN INIT INFO
+# Provides: app_net
+# Required-Start: $local_fs $remote_fs $network
+# Required-Stop: $local_fs $remote_fs $network
+# Default-Start: 2 3 4 5
+# Default-Stop: 0 1 6
+# Short-Description: start and stop apns
+### END INIT INFO
+
+
+. /etc/rc.d/init.d/functions
+
+SERVER_NAME="Testnet-Server"
+SERVER_CMD="/root/.pyenv/versions/3.4.3/bin/python"
+SERVER_SCP="app_net"
+SERVER_PTH="/opt/webapps/${SERVER_SCP}"
+SERVER_OPT="${SERVER_SCP}.py"
+SERVER_OPT_START="${SERVER_OPT} --cmd=start --conf="
+SERVER_OPT_STOP="${SERVER_OPT} --cmd=stop --conf="
+SERVER_TMP="/tmp/${SERVER_SCP}.tmp"
+SERVER_CONFPATH="/etc/mx_apps/${SERVER_SCP}/${SERVER_SCP}_is*"
+
+. /etc/rc.d/init.d/mxapps
+
