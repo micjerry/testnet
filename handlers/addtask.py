@@ -8,7 +8,7 @@ import uuid
 from mickey.basehandler import BaseHandler
 from tetaskmgr import TetaskMgr
 
-class AddTaskHandler(tornado.web.RequestHandler):
+class AddTaskHandler(BaseHandler):
     @tornado.web.asynchronous
     @tornado.gen.coroutine
     def post(self):

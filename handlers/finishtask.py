@@ -22,7 +22,7 @@ _insertudp_sql = """
   VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s');
 """
 
-class FinishTaskHandler(tornado.web.RequestHandler):
+class FinishTaskHandler(BaseHandler):
     @tornado.web.asynchronous
     @tornado.gen.coroutine
     def post(self):
