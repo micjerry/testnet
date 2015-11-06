@@ -8,7 +8,7 @@ _logger = logging.getLogger(__name__)
 class TetaskMgr(object):
     initialized = False
     index = 0
-    CONN_NUM = 10
+    CONN_NUM = 6
     start_port = 12356
     task_pools = []
 

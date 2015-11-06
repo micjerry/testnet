@@ -9,7 +9,7 @@ import calendar
 import tornado_mysql
 from mickey.mysqlcon import get_mysqlcon
 
-from mickey.basehandler import BaseHandler
+from mickey.ptbasehandler import BaseHandler
 from tetaskmgr import TetaskMgr
 
 _inserttcp_sql = """
