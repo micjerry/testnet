@@ -71,7 +71,7 @@ class FinishTaskHandler(BaseHandler):
             return
         try:
             cur = conn.cursor()
-            format_sql = _inserttcp_sql % (taskid, '0', s_current, upb, downb)
+            format_sql = _inserttcp_sql % (taskid, self.p_userid, s_current, upb, downb)
             yield cur.execute(format_sql)
             cur.close()
 
@@ -99,7 +99,7 @@ class FinishTaskHandler(BaseHandler):
 
         try:
             cur = conn.cursor()
-            format_sql = _insertudp_sql % (taskid, '0', s_current, tb, db_direct, jitter, lose)
+            format_sql = _insertudp_sql % (taskid, self.p_userid, s_current, tb, db_direct, jitter, lose)
             yield cur.execute(format_sql)
             cur.close()
 

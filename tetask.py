@@ -39,7 +39,7 @@ class Tetask(object):
         self.taskid = None
 
     def checkexpire(self):
-        logging.debug("check expire of %s" % self.taskid)
+        #logging.debug("check expire of %s" % self.taskid)
         if not self.taskid:
             return
 

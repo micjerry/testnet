@@ -35,7 +35,7 @@ class Application(tornado.web.Application):
         tornado.web.Application.__init__(self, handlers, debug=True)
 
     def checktime(self):
-        logging.info("begin to check timeout")
+        #logging.info("begin to check timeout")
         TetaskMgr.check()
  
 class MickeyDamon(Daemon):

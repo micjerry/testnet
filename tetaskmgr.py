@@ -27,7 +27,7 @@ class TetaskMgr(object):
 
     @classmethod
     def check(cls):
-        _logger.info("check all the tasks")
+        #_logger.info("check all the tasks")
         #for item in cls.task_pools:
         #    item.checkexpire()
         list(map(lambda x: x.checkexpire(), cls.task_pools))

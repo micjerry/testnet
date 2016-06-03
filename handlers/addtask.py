@@ -14,7 +14,7 @@ class AddTaskHandler(BaseHandler):
     def post(self):
         data = json.loads(self.request.body.decode("utf-8"))
         userid = data.get("id", "").lower()
-        #logging.info("%s fetch device %s" % (self.p_userid))
+        logging.info("%s begin test net" % (self.p_userid))
 
         taskid = str(uuid.uuid4()).replace('-', '_')
         available_task = TetaskMgr.starttask(taskid)
